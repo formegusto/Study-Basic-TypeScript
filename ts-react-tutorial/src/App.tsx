@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Greetings from './Greetings';
+import MyForm from './MyForm';
 
 function App() {
-  const onClick = (name: string) : void => {
-    console.log(`${name} Hello!`);
-  }
+  const onSubmit = (form: { name: string; description: string }) : void => {
+    console.log(form);
+  };
   return (
-    <Greetings name="TH" optional='옵션선택' onClick={onClick}/>
+    <MyForm onSubmit={onSubmit} />
   );
 }
 
